@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY ./ ./client
 RUN cd client && npm install && npm run build --prod
 
-# Use official nginx image as the base image
+# Use official nginx image as base image
 FROM nginx:latest
 
 # Copy the build output to replace the default nginx contents.
